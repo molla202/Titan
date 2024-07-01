@@ -102,6 +102,7 @@ titand config node tcp://localhost:29657
 ```
 ### 🚧Genesis ve addrbook
 ```
+curl -L https://raw.githubusercontent.com/molla202/Titan/main/addrbook.json > $HOME/.titan/config/addrbook.json
 curl -L https://raw.githubusercontent.com/nezha90/titan/main/genesis/genesis.json > $HOME/.titan/config/genesis.json
 ```
 ### 🚧Port
@@ -150,8 +151,7 @@ sed -i -e "s/^indexer *=.*/indexer = \"null\"/" $HOME/.titan/config/config.toml
 ```
 ### Snap 
 ```
-junctiond tendermint unsafe-reset-all --home $HOME/.titan
-curl -L http://37.120.189.81/titan_testnet/titan_snap.tar.lz4 | tar -I lz4 -xf - -C $HOME/.titan
+soon
 ```
 ### 🚧Başlatalım
 ```
