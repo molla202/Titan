@@ -98,7 +98,7 @@ titand init node-adi-yaz --chain-id titan-test-1
 ```
 ```
 titand config keyring-backend os
-titand config node tcp://localhost:65657
+titand config node tcp://localhost:29657
 ```
 ### 🚧Genesis ve addrbook
 ```
@@ -106,26 +106,26 @@ curl -L https://raw.githubusercontent.com/nezha90/titan/main/genesis/genesis.jso
 ```
 ### 🚧Port
 ```
-echo "export J_PORT="65"" >> $HOME/.bash_profile
+echo "export T_PORT="29"" >> $HOME/.bash_profile
 source $HOME/.bash_profile
 ```
 ```
-sed -i.bak -e "s%:1317%:${J_PORT}317%g;
-s%:8080%:${J_PORT}080%g;
-s%:9090%:${J_PORT}090%g;
-s%:9091%:${J_PORT}091%g;
-s%:8545%:${J_PORT}545%g;
-s%:8546%:${J_PORT}546%g;
-s%:6065%:${J_PORT}065%g" $HOME/.titan/config/app.toml
+sed -i.bak -e "s%:1317%:${T_PORT}317%g;
+s%:8080%:${T_PORT}080%g;
+s%:9090%:${T_PORT}090%g;
+s%:9091%:${T_PORT}091%g;
+s%:8545%:${T_PORT}545%g;
+s%:8546%:${T_PORT}546%g;
+s%:6065%:${T_PORT}065%g" $HOME/.titan/config/app.toml
 ```
 ### Port
 ```
-sed -i.bak -e "s%:26658%:${J_PORT}658%g;
-s%:26657%:${J_PORT}657%g;
-s%:6060%:${J_PORT}060%g;
-s%:26656%:${J_PORT}656%g;
-s%^external_address = \"\"%external_address = \"$(wget -qO- eth0.me):${J_PORT}656\"%;
-s%:26660%:${J_PORT}660%g" $HOME/.titan/config/config.toml
+sed -i.bak -e "s%:26658%:${T_PORT}658%g;
+s%:26657%:${T_PORT}657%g;
+s%:6060%:${T_PORT}060%g;
+s%:26656%:${T_PORT}656%g;
+s%^external_address = \"\"%external_address = \"$(wget -qO- eth0.me):${T_PORT}656\"%;
+s%:26660%:${T_PORT}660%g" $HOME/.titan/config/config.toml
 ```
 ### 🚧Seed ve Peer
 ```
@@ -186,17 +186,17 @@ titand tx staking create-validator \
   --commission-rate=0.07 \
   --min-self-delegation=1 \
   --fees 500uttnt \
-  --node=http://localhost:35657
+  --node=http://localhost:29657
   -y
 ```
 ### Kendinize stake
 NOT: cüzdan adınızı yazın
 ```
-titand tx staking delegate $(titand keys show cüzdan-adi-yaz --bech val -a) 1000000amf --from cüzdan-adi-yaz --chain-id titan-test-1 --fees 500uttnt --node=http://localhost:65657 -y
+titand tx staking delegate $(titand keys show cüzdan-adi-yaz --bech val -a) 1000000amf --from cüzdan-adi-yaz --chain-id titan-test-1 --fees 500uttnt --node=http://localhost:29657 -y
 ```
 ### Jailden çıkma
 ```
-titand tx slashing unjail --from cüzdan-adi-yaz --chain-id titan-test-1 --fees 500uttnt --node=http://localhost:65657 -y
+titand tx slashing unjail --from cüzdan-adi-yaz --chain-id titan-test-1 --fees 500uttnt --node=http://localhost:29657 -y
 ```
 
 
