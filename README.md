@@ -155,7 +155,7 @@ curl -L http://37.120.189.81/titan_testnet/titan_snap.tar.lz4 | tar -I lz4 -xf -
 ```
 ### 🚧Başlatalım
 ```
-sudo systemctl daemon-reload && sudo systemctl start titand && sudo journalctl -u titand -f --no-hostname -o cat
+sudo systemctl daemon-reload && sudo systemctl restart titand && sudo journalctl -u titand -f --no-hostname -o cat
 ```
 ### Log
 ```
