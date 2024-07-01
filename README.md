@@ -192,7 +192,7 @@ titand tx staking create-validator \
 ### Kendinize stake
 NOT: cüzdan adınızı yazın
 ```
-titand tx staking delegate $(titand keys show cüzdan-adi-yaz --bech val -a) 1000000amf --from cüzdan-adi-yaz --chain-id titan-test-1 --fees 500uttnt --node=http://localhost:29657 -y
+titand tx staking delegate $(titand keys show cüzdan-adi-yaz --bech val -a) 1000000uttnt --from cüzdan-adi-yaz --chain-id titan-test-1 --fees 500uttnt --node=http://localhost:29657 -y
 ```
 ### Jailden çıkma
 ```
