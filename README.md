@@ -68,7 +68,7 @@ go install cosmossdk.io/tools/cosmovisor/cmd/cosmovisor@v1.5.0
 ```
 sudo tee /etc/systemd/system/titand.service > /dev/null << EOF
 [Unit]
-Description=junction node service
+Description=titand node service
 After=network-online.target
 
 [Service]
