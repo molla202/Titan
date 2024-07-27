@@ -48,9 +48,10 @@ source $HOME/.bash_profile
 ```
 ### 🚧Dosyaları çekelim
 ```
-git clone https://github.com/nezha90/titan.git
-cd titan
+git clone https://github.com/Titannet-dao/titan-chain.git
+cd titan-chain
 go build ./cmd/titand
+cd
 ```
 ```
 mkdir -p /root/.titan/cosmovisor/genesis/bin
@@ -94,7 +95,7 @@ sudo systemctl enable titand
 ### 🚧İnit
 NOT: node adını yaz
 ```
-titand init node-adi-yaz --chain-id titan-test-1
+titand init node-adi-yaz --chain-id titan-test-2
 ```
 ```
 titand config keyring-backend os
@@ -130,7 +131,7 @@ s%:26660%:${T_PORT}660%g" $HOME/.titan/config/config.toml
 ```
 ### 🚧Seed ve Peer
 ```
-peers="b656a30fd7585c68c72167805784bcd3bed2d67c@8.217.10.76:26656"
+peers="46d55979a4d71b19681e9aa51f34dc252428fd21@193.34.212.80:29656"
 sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" $HOME/.titan/config/config.toml
 seeds="bb075c8cc4b7032d506008b68d4192298a09aeea@47.76.107.159:26656"
 sed -i.bak -e "s/^seeds =.*/seeds = \"$seeds\"/" $HOME/.titan/config/config.toml
@@ -141,7 +142,7 @@ sed -i.bak -e "s/^seeds =.*/seeds = \"$seeds\"/" $HOME/.titan/config/config.toml
 ```
 sed -i -e "s/^pruning *=.*/pruning = \"custom\"/" $HOME/.titan/config/app.toml
 sed -i -e "s/^pruning-keep-recent *=.*/pruning-keep-recent = \"100\"/" $HOME/.titan/config/app.toml
-sed -i -e "s/^pruning-interval *=.*/pruning-interval = \"50\"/" $HOME/.titan/config/app.toml
+sed -i -e "s/^pruning-interval *=.*/pruning-interval = \"10\"/" $HOME/.titan/config/app.toml
 ```
 ### 🚧Gas ve index ayarı
 ```
@@ -175,7 +176,7 @@ NOT: moniker ve cüzdan adınızı girin...
 titand tx staking create-validator \
   --amount=1000000uttnt \
   --pubkey=$(titand tendermint show-validator) \
-  --chain-id=titan-test-1 \
+  --chain-id=titan-test-2 \
   --from=cuzdanadiniz \
   --moniker "monikeradiniz" \
   --identity "opsiyonel" \
@@ -192,11 +193,11 @@ titand tx staking create-validator \
 ### Kendinize stake
 NOT: cüzdan adınızı yazın
 ```
-titand tx staking delegate $(titand keys show cüzdan-adi-yaz --bech val -a) 1000000uttnt --from cüzdan-adi-yaz --chain-id titan-test-1 --fees 500uttnt --node=http://localhost:29657 -y
+titand tx staking delegate $(titand keys show cüzdan-adi-yaz --bech val -a) 1000000uttnt --from cüzdan-adi-yaz --chain-id titan-test-2 --fees 500uttnt --node=http://localhost:29657 -y
 ```
 ### Jailden çıkma
 ```
-titand tx slashing unjail --from cüzdan-adi-yaz --chain-id titan-test-1 --fees 500uttnt --node=http://localhost:29657 -y
+titand tx slashing unjail --from cüzdan-adi-yaz --chain-id titan-test-2 --fees 500uttnt --node=http://localhost:29657 -y
 ```
 
 
