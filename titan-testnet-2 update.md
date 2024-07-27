@@ -6,7 +6,7 @@
 
 ```
 sudo apt install rsync
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/MictoNode/titan-cosmos/main/update.sh)"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/MictoNode/Titan/main/update.sh)"
 git clone https://github.com/Titannet-dao/titan-chain.git
 cd titan-chain
 go build ./cmd/titand
