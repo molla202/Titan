@@ -1,6 +1,6 @@
 
 
-Güncelleme
+### Güncelleme
 
 ### 🚧Gerekliliklerle dosyaları çekelim
 
@@ -31,4 +31,7 @@ sudo systemctl restart titand
 ```
 sudo journalctl -u titand -f -o cat
 ```
-### 🚧Teşekkürler baybay
+![oldubak](https://github.com/user-attachments/assets/9315d97e-dfff-49c0-8f02-a38bfa24681c)
+
+
+### Teşekkürler baybay
