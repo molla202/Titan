@@ -55,7 +55,7 @@ cd
 ```
 ```
 mkdir -p /root/.titan/cosmovisor/genesis/bin
-cp -r /root/titan/titand /root/.titan/cosmovisor/genesis/bin/
+cp -r /root/titan-chain/titand /root/.titan/cosmovisor/genesis/bin/
 ```
 ```
 sudo ln -s $HOME/.titan/cosmovisor/genesis $HOME/.titan/cosmovisor/current -f
