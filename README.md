@@ -104,7 +104,7 @@ titand config node tcp://localhost:29657
 ### 🚧Genesis ve addrbook
 ```
 curl -L https://raw.githubusercontent.com/molla202/Titan/main/addrbook.json > $HOME/.titan/config/addrbook.json
-curl -L https://raw.githubusercontent.com/nezha90/titan/main/genesis/genesis.json > $HOME/.titan/config/genesis.json
+curl -L https://raw.githubusercontent.com/Titannet-dao/titan-chain/main/genesis/genesis.json > $HOME/.titan/config/genesis.json
 ```
 ### 🚧Port
 ```
